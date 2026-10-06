@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AtES NB | Indian Brands - Sell, Grow &amp; Scale Online</title>
+  <meta name="description" content="Marketplace management, web &amp; app development and digital marketing for Indian brands selling on Amazon, Flipkart and Myntra.">
+  <script>document.documentElement.classList.add('js','is-loading','ates-hide');</script>
+  <style id="loader-critical">
+    /* Inline so the loader paints on the very first frame, before any stylesheet arrives.
+       Only transform + opacity are animated (they run on the GPU compositor and stay smooth
+       even while the main thread is busy); the thin blue arc is the one exception. */
+    html { scrollbar-gutter: stable; }
+    html.is-loading, html.is-loading body { overflow: hidden; }
+    html.is-loading { background: #000; }
+
+    /* Page content stays hidden until style.css + Inter are ready (then it is revealed UNDER the loader), so the
+       loader can paint on the very first frame and nothing visible ever reflows. The 6s animation is a CSS-only failsafe. */
+    html.ates-hide body > :not(#page-loader):not(script) { visibility: hidden; animation: atesFailsafe 0s linear 6s forwards; }
+    @keyframes atesFailsafe { to { visibility: visible; } }
+    html.is-loading .sec-2 .marquee-row { animation-play-state: paused !important; } /* nothing animates behind the loader */
+
+    .ates-loader {
+      position: fixed; inset: 0; z-index: 9999;
+      display: flex; align-items: center; justify-content: center;
+      background: #000;
+      opacity: 1;
+      transform: translateZ(0);
+      will-change: opacity;
+      transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+    }
+    .ates-loader.is-done { opacity: 0; visibility: hidden; pointer-events: none; }
+
+    .ates-loader__logo { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
+
+    .ates-loader__mark { position: relative; width: 170px; height: 170px; overflow: hidden; }
+    .ates-loader__layer { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+    /* Red pillars: a black cover slides down off them (transform = compositor, no repaint) */
+    .ates-loader__wipe {
+      position: absolute; left: -2px; right: -2px; top: 9.5%; height: 63.5%;
+      background: #000;
+      will-change: transform;
+      animation: atesWipe 1.1s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;
+    }
+    @keyframes atesWipe { to { transform: translate3d(0, 101%, 0); } }
+
+    /* Blue arc: pathLength=100 makes the draw start immediately and finish exactly with the wipe */
+    .ates-loader__ring {
+      stroke-dasharray: 100; stroke-dashoffset: 100;
+      animation: atesArc 1.1s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;
+    }
+    @keyframes atesArc { to { stroke-dashoffset: 0; } }
+
+    /* Text: starts only once its fonts are ready (class added by the inline script) so it never swaps fonts mid-fade */
+    .ates-loader__text {
+      display: flex; flex-direction: column; align-items: center;
+      opacity: 0; transform: translate3d(0, 8px, 0);
+      will-change: opacity, transform;
+    }
+    .ates-loader.is-text-go .ates-loader__text { animation: atesText 0.7s ease-out forwards; }
+    @keyframes atesText { to { opacity: 1; transform: translate3d(0, 0, 0); } }
+
+    .ates-loader__title {
+      font-family: 'Orbitron', system-ui, sans-serif; color: #8f9399;
+      font-size: 2.5rem; font-weight: 700; letter-spacing: 0.5px; line-height: 1; margin-bottom: 8px;
+    }
+    .ates-loader__sub { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; }
+    .ates-loader__line { display: block; height: 1.5px; width: 60px; background: #4e535a; }
+    .ates-loader__subtext {
+      font-family: 'Rajdhani', system-ui, sans-serif; color: #6b7077;
+      font-size: 1.1rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; white-space: nowrap;
+    }
+
+    @media (max-width: 480px) {
+      .ates-loader__mark { width: 130px; height: 130px; }
+      .ates-loader__title { font-size: 2rem; }
+      .ates-loader__line { width: 36px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .ates-loader__wipe { display: none; }
+      .ates-loader__ring { animation: none; stroke-dashoffset: 0; }
+      .ates-loader__text { opacity: 1; transform: none; }
+      .ates-loader.is-text-go .ates-loader__text { animation: none; }
+      .ates-loader { transition-duration: 0.2s, 0s; transition-delay: 0s, 0.2s; }
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link id="loader-fonts" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@700&display=swap" media="print" onload="this.media='all'">
+  <!-- None of these block rendering (media=print swap): the loader paints on the first frame.
+       Content stays hidden (see .ates-hide) until style.css + Inter are applied. Order matters: style.css last. -->
+  <link rel="preload" as="style" href="/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" data-async onload="this.media='all';this.setAttribute('data-ready','1')" onerror="this.media='all';this.setAttribute('data-ready','1')">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" data-async onload="this.media='all';this.setAttribute('data-ready','1')" onerror="this.media='all';this.setAttribute('data-ready','1')">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" media="print" data-async onload="this.media='all';this.setAttribute('data-ready','1')" onerror="this.media='all';this.setAttribute('data-ready','1')">
+  <link rel="stylesheet" href="/css/style.css" id="main-css" media="print" data-async onload="this.media='all';this.setAttribute('data-ready','1')" onerror="this.media='all';this.setAttribute('data-ready','1')">
+  <style id="fa-font-display">
+    /* Font Awesome 6.4.0 ships font-display:block (icons invisible while loading). This sits after the CDN
+       stylesheet in the DOM, so these identical-descriptor rules win and switch it to swap. */
+    @font-face { font-family: "Font Awesome 6 Free"; font-style: normal; font-weight: 900; font-display: swap;
+      src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2") format("woff2"); }
+    @font-face { font-family: "Font Awesome 6 Free"; font-style: normal; font-weight: 400; font-display: swap;
+      src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-regular-400.woff2") format("woff2"); }
+    @font-face { font-family: "Font Awesome 6 Brands"; font-style: normal; font-weight: 400; font-display: swap;
+      src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2") format("woff2"); }
+  </style>
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>.ates-loader{display:none}</style>
+  </noscript>
+</head>
+<body>
+  <!-- Preloader: logo reveal. Controlled by the inline script right below (no dependency on script.js). -->
+  <div id="page-loader" class="ates-loader" role="status" aria-live="polite" aria-label="Loading AtES NB">
+    <div class="ates-loader__logo">
+      <div class="ates-loader__mark" aria-hidden="true">
+        <svg class="ates-loader__layer" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 86,40 L 97,20 L 97,144 A 57 57 0 0 1 86,137 Z" fill="#b52227" />
+          <path d="M 103,20 L 114,40 L 114,137 A 57 57 0 0 1 103,144 Z" fill="#b52227" />
+        </svg>
+        <span class="ates-loader__wipe"></span>
+        <svg class="ates-loader__layer" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="ates-loader__ring" pathLength="100" d="M 140,42 A 66 66 0 1 1 60,42" stroke="#114a89" stroke-width="18" stroke-linecap="butt" />
+        </svg>
+      </div>
+      <div class="ates-loader__text">
+        <div class="ates-loader__title">Ecommerce</div>
+        <div class="ates-loader__sub">
+          <span class="ates-loader__line"></span>
+          <span class="ates-loader__subtext">ATES NB</span>
+          <span class="ates-loader__line"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function () {
+    var root = document.documentElement;
+    var loader = document.getElementById('page-loader');
+    if (!loader) { root.classList.remove('is-loading', 'ates-hide'); return; }
+
+    var NO_LOADER = /[?&]loader=0(&|$)/.test(location.search);   // diagnostic only: open /?loader=0 in PageSpeed to see what the loader costs
+    if (NO_LOADER) loader.style.display = 'none';
+
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var t0 = performance.now();
+    var TEXT_AT = reduce ? 0 : 1400;     // text fades in as the logo finishes drawing
+    var MIN_MS  = NO_LOADER ? 0 : (reduce ? 400 : 2000);   // let the whole animation play
+    var MAX_MS  = 4000;                  // never trap a visitor on a slow connection
+    var REVEAL_MAX = 2500;               // show the page by now even if a font/stylesheet is still pending
+    var domReady = document.readyState !== 'loading';
+    var finished = false;
+
+    function elapsed() { return performance.now() - t0; }
+
+    /* 1) Start the text only when Orbitron/Rajdhani are ready (or after 1.5s), never earlier than TEXT_AT */
+    function textGo() { loader.classList.add('is-text-go'); }
+    var fontLink = document.getElementById('loader-fonts');
+    var fontsCss = new Promise(function (resolve) {
+      if (!fontLink || fontLink.sheet) return resolve();
+      fontLink.addEventListener('load', resolve);
+      fontLink.addEventListener('error', resolve);
+    });
+    var fontsReady = fontsCss.then(function () {
+      if (!document.fonts || !document.fonts.load) return;
+      return Promise.all([document.fonts.load('700 40px Orbitron'), document.fonts.load('700 18px Rajdhani')]);
+    }).catch(function () {});
+    Promise.race([fontsReady, new Promise(function (r) { setTimeout(r, 1500); })]).then(function () {
+      setTimeout(textGo, Math.max(0, TEXT_AT - elapsed()));
+    });
+
+    /* 2) Reveal the page (under the loader) as soon as DOM + style.css + Inter are ready; fade the loader after MIN_MS.
+          Revealing early is what lets the hero text count as the LCP long before the loader leaves. */
+    document.addEventListener('DOMContentLoaded', function () { domReady = true; });
+
+    var mainCss = document.getElementById('main-css');
+    var interLink = document.querySelector('link[data-async][href*="family=Inter"]');
+    var interReady = false, interStarted = false, revealed = false;
+    function checkInter() {
+      if (interStarted) return;
+      if (!interLink || !document.fonts || !document.fonts.load) { interStarted = interReady = true; return; }
+      if (!interLink.getAttribute('data-ready')) return;
+      interStarted = true;
+      var done = function () { interReady = true; };
+      Promise.all(['400 16px Inter', '600 16px Inter', '800 42px Inter'].map(function (f) { return document.fonts.load(f); })).then(done, done);
+    }
+    function reveal() {
+      if (revealed) return;
+      revealed = true;
+      root.classList.remove('ates-hide');
+    }
+    var poll = setInterval(function () {
+      var e = elapsed();
+      checkInter();
+      var cssReady = !mainCss || mainCss.getAttribute('data-ready');
+      if (!revealed && (e >= REVEAL_MAX || (domReady && cssReady && interReady))) reveal();
+      if (e >= MAX_MS || (e >= MIN_MS && revealed)) { reveal(); finish(); }
+    }, 50);
+
+    function finish() {
+      if (finished) return;
+      finished = true;
+      clearInterval(poll);
+      // two frames so the browser has painted the styled page behind the loader before we fade it
+      requestAnimationFrame(function () { requestAnimationFrame(function () {
+        loader.classList.add('is-done');                       // opacity fade = compositor only
+        setTimeout(cleanup, reduce ? 300 : 650);
+      }); });
+    }
+
+    /* Decorative hero video (under a dark overlay): works on phones too, but is requested on first touch/scroll/key
+       or after VIDEO_DELAY_MS, so YouTube's ~1 MB of scripts never competes with the page's own load. Skipped on data-saver. */
+    var VIDEO_DELAY_MS = 6000;
+    function startVideoLater(video) {
+      if (navigator.connection && navigator.connection.saveData) return;
+      var events = ['pointerdown', 'touchstart', 'keydown', 'scroll'], timer;
+      function start() {
+        if (!video.getAttribute('data-src')) return;
+        clearTimeout(timer);
+        events.forEach(function (t) { window.removeEventListener(t, start); });
+        video.src = video.getAttribute('data-src');
+        video.removeAttribute('data-src');
+      }
+      events.forEach(function (t) { window.addEventListener(t, start, { passive: true }); });
+      timer = setTimeout(start, VIDEO_DELAY_MS);
+    }
+
+    /* 3) Only after the fade: unlock scrolling, resume animations, remove the loader, start the hero video */
+    function cleanup() {
+      root.classList.remove('is-loading');
+      if (loader.parentNode) loader.parentNode.removeChild(loader);
+      var video = document.querySelector('iframe[data-src]');
+      if (video) startVideoLater(video);
+    }
+  })();
+  </script>
+
+  <header class="site-header">
+      <div class="logo">
+        <!-- Replaced emoji with logo.png -->
+        <img src="logo.webp" alt="AtES NB Logo" class="brand-logo-img" width="30" height="32" decoding="async">
+        AtES<span>NB</span>
+      </div>
+      <a class="header-btn" href="#hero-form" data-calendly>Book A Call</a>
+  </header>
+
+  <main id="top">
+    <section id="hero" class="site-section sec-1" data-tone="dark">
+      <!-- Background Video & Dark Overlay -->
+      <div class="hero-video-wrapper">
+        <iframe 
+          title="Background video" tabindex="-1"
+          data-src="https://www.youtube-nocookie.com/embed/cVpnw08o1U4?autoplay=1&mute=1&loop=1&playlist=cVpnw08o1U4&controls=0&showinfo=0&rel=0&iv_load_policy=3&disablekb=1&playsinline=1" 
+          frameborder="0" 
+          allow="autoplay; encrypted-media" 
+          allowfullscreen>
+        </iframe>
+        <div class="hero-video-overlay"></div>
+      </div>
+
+      <div class="site-section__inner">
+        <div class="hero">
+            <div class="hero-container">
+
+              <!-- LEFT COLUMN -->
+              <div class="hero-left">
+                <div class="heading-wrapper">
+                  <h1 class="hero-title">
+                    WE HELP INDIAN BRANDS SELL, GROW & SCALE ONLINE.
+                  </h1>
+                </div>
+
+                <p class="hero-description">
+                  We take care of your marketplace accounts so your products stay in stock, properly listed, highly visible and ready to sell. Our team manages everything from catalog and listing optimization to inventory, advertising, promotions, ensuring your marketplace presence stays active and competitive.
+                </p>
+                <p class="hero-description">
+                  Amazon, Flipkart & Myntra — one dedicated team managing the day-to-day work behind your online sales, so you can focus on your products, your customers and your next stage of growth.
+                </p>
+                <p class="hero-description">
+                  Marketplace Management · Web & App Development · Digital Marketing
+                </p>
+
+                <a href="#hero-form" class="btn-cta" data-calendly>
+                  📞 Book a 30 Minutes Call
+                </a>
+
+                <div class="trust-badges">
+                  <div class="trust-item">
+                    <span>☑</span> 100% confidential
+                  </div>
+                  <div class="trust-item">
+                    <span>🔒</span> We sign NDA
+                  </div>
+                </div>
+              </div>
+
+              <!-- RIGHT COLUMN (FORM) -->
+              <div class="hero-right">
+                <h2 class="form-title">Please message us so we can discuss your project in detail.</h2>
+
+                <form id="hero-form" class="js-demo-form" data-source="hero" action="#" method="POST" novalidate>
+                  <div class="hp-field" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+                  <div class="form-group">
+                    <label for="hero-fullName">Full Name</label>
+                    <input type="text" id="hero-fullName" name="fullName" required autocomplete="name">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="hero-email">Email Address</label>
+                    <input type="email" id="hero-email" name="email" required autocomplete="email">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="hero-company">Company Name</label>
+                    <input type="text" id="hero-company" name="company">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="hero-message">Message</label>
+                    <textarea id="hero-message" name="message"></textarea>
+                  </div>
+
+                  <button type="submit" class="btn-submit">
+                    Request Free Quote &rarr;
+                  </button>
+                </form>
+              </div>
+
+            </div>
+          </div>
+      </div>
+    </section>
+
+<section id="impact" class="site-section sec-2" data-tone="cream">
+  <div class="site-section__inner">
+    <div class="impact-section">
+      <h2 class="impact-title">We’ve Driven Impact At</h2>
+      <div class="title-line"></div>
+
+      <div class="marquee-wrapper">
+
+        <!-- Top Marquee Row -->
+        <div class="marquee-row row-top">
+          <!-- Card 1 -->
+          <div class="diamond-item">
+            <div class="diamond-card">
+              <div class="diamond-content">
+                <img src="images/client-0.webp" alt="Clasivity" class="brand-logo-img" width="204" height="134" decoding="async" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="diamond-item">
+            <div class="diamond-card">
+              <div class="diamond-content">
+                <img src="images/client-2.webp" alt="Nanogen Logo" class="brand-logo-img" width="240" height="240" decoding="async" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="diamond-item">
+            <div class="diamond-card">
+              <div class="diamond-content">
+                <img src="images/client-3.webp" alt="Miracle Digital Logo" class="brand-logo-img" width="240" height="240" decoding="async" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="diamond-item">
+            <div class="diamond-card">
+              <div class="diamond-content">
+                <img src="images/client-4.webp" alt="Printme Logo" class="brand-logo-img" width="172" height="240" decoding="async" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="diamond-item">
+            <div class="diamond-card">
+              <div class="diamond-content">
+                <img src="images/client-5.webp" alt="Soniqx Logo" class="brand-logo-img" width="240" height="131" decoding="async" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="diamond-item">
+            <div class="diamond-card">
+              <div class="diamond-content">
+                <img src="images/client-6.webp" alt="ANI Divine Logo" class="brand-logo-img" width="240" height="205" decoding="async" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="diamond-item">
+            <div class="diamond-card">
+              <div class="diamond-content">
+                <img src="images/client-7.webp" alt="Sri Maa Venture Logo" class="brand-logo-img" width="225" height="225" decoding="async" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="diamond-item">
+            <div class="diamond-card">
+              <div class="diamond-content">
+                <img src="images/client-8.webp" alt="JTC Logo" class="brand-logo-img" width="240" height="240" decoding="async" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="diamond-item">
+            <div class="diamond-card">
+              <div class="diamond-content">
+                <img src="images/client-9.webp" alt="Ahead Labs Logo" class="brand-logo-img" width="240" height="187" decoding="async" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 10 -->
+          <div class="diamond-item">
+            <div class="diamond-card">
+              <div class="diamond-content">
+                <img src="images/client-10.webp" alt="FB Logo" class="brand-logo-img" width="240" height="240" decoding="async" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Marquee Row -->
+        <div class="marquee-row row-bottom">
+          <!-- Card 11 -->
+          <div class="diamond-item">
+            <div class="diamond-card">
+              <div class="diamond-content">
+                <img src="images/client-11.webp" alt="Parul Logo" class="brand-logo-img" width="240" height="233" decoding="async" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 12 -->
+          <div class="diamond-item">
+            <div class="diamond-card">
+              <div class="diamond-content">
+                <img src="images/client-12.webp" alt="Suglow Logo" class="brand-logo-img" width="240" height="198" decoding="async" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 13 -->
+          <div class="diamond-item">
+            <div class="diamond-card">
+              <div class="diamond-content">
+                <img src="images/client-13.webp" alt="Baton Tea Logo" class="brand-logo-img" width="240" height="240" decoding="async" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 14 -->
+          <div class="diamond-item">
+            <div class="diamond-card">
+              <div class="diamond-content">
+                <img src="images/client-14.webp" alt="Lafua Logo" class="brand-logo-img" width="240" height="240" decoding="async" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 15 -->
+          <div class="diamond-item">
+            <div class="diamond-card">
+              <div class="diamond-content">
+                <img src="images/client-15.webp" alt="Organic Nation Logo" class="brand-logo-img" width="240" height="239" decoding="async" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 16 -->
+          <div class="diamond-item">
+            <div class="diamond-card">
+              <div class="diamond-content">
+                <img src="images/client-16.webp" alt="Delci Logo" class="brand-logo-img" width="225" height="225" decoding="async" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 17 -->
+          <div class="diamond-item">
+            <div class="diamond-card">
+              <div class="diamond-content">
+                <img src="images/client-17.webp" alt="Allester Logo" class="brand-logo-img" width="240" height="102" decoding="async" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="partners" class="site-section sec-3" data-tone="white">
+      <div class="site-section__inner">
+
+        <div class="partners-section" id="partnersSection">
+          <div class="partners-container">
+            <h2 class="partners-title">Our Partners</h2>
+            <div class="title-line"></div>
+
+            <div class="partners-wrapper">
+
+              <div class="partners-row top-row">
+
+                <div class="partner-card card-left">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Partner" width="140" height="60" loading="lazy" decoding="async">
+                  <span class="partner-badge orange">E-Commerce</span>
+                </div>
+
+
+                <div class="partner-card card-center">
+                  <img src="https://cdn.worldvectorlogo.com/logos/flipkart.svg" alt="Flipkart Partner" width="140" height="60" loading="lazy" decoding="async">
+                  <span class="partner-badge blue">E-Commerce</span>
+                </div>
+
+
+                <div class="partner-card card-right">
+                  <img src="https://cdn.worldvectorlogo.com/logos/myntra-1.svg" alt="Myntra Partner" width="140" height="60" loading="lazy" decoding="async">
+                  <span class="partner-badge pink">Fashion Partner</span>
+                </div>
+              </div>
+
+
+              <div class="partners-row bottom-row">
+
+                <div class="partner-card card-bottom">
+                  <img src="https://cdn.worldvectorlogo.com/logos/shopify-2.svg" alt="Shopify Certified Partner" width="140" height="60" loading="lazy" decoding="async">
+                  <span class="partner-badge green">Certified Partner</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="site-section sec-4" data-tone="white">
+      <div class="site-section__inner">
+        <div class="container">
+          <div class="header">
+            <h2>Customized E-commerce Services to Meet Your Needs</h2>
+            <div class="underline"></div>
+          </div>
+
+          <div class="services-grid">
+
+
+            <div class="card">
+              <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+              </div>
+              <h2>E-commerce Consulting</h2>
+              <p>Our experts analyze your business requirements, market trends, and customer behavior to provide strategic guidance. We help you choose the right platform, define a scalable architecture, and create a roadmap for success.</p>
+            </div>
+
+
+            <div class="card">
+              <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <h2>Custom E-commerce Development</h2>
+              <p>We build tailored eCommerce solutions designed to align perfectly with your goals. Whether it's a feature-rich online store or a specialized solution, our custom development ensures flexibility and scalability.</p>
+            </div>
+
+
+            <div class="card">
+              <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+              </div>
+              <h2>Mobile E-commerce App Development</h2>
+              <p>Expand your reach with mobile apps that offer seamless shopping experiences. We create user-friendly, fast, and secure eCommerce apps that drive engagement and sales on iOS and Android platforms.</p>
+            </div>
+
+
+            <div class="card">
+              <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+              </div>
+              <h2>E-commerce Website Design</h2>
+              <p>We design attractive, user-focused websites that align with your brand and convert visitors into customers. Our designs prioritize usability, fast loading speeds, and an engaging shopping experience.</p>
+            </div>
+
+
+            <div class="card">
+              <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+              </div>
+              <h2>Account Setup &amp; Onboarding</h2>
+              <p>Streamline your marketplace entry. We handle complete account creation, brand approval, documentation, and verification across platforms for a fast start.</p>
+            </div>
+
+
+            <div class="card">
+              <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+              </div>
+              <h2>Listing &amp; Catalog Management</h2>
+              <p>Boost product visibility and sales. We manage SEO-optimized product listings, category mapping, keyword research, and A+ Content across major channels.</p>
+            </div>
+
+
+            <div class="card">
+              <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              </div>
+              <h2>eCommerce Integrations</h2>
+              <p>From payment gateways to CRM systems, we integrate third-party tools and services seamlessly into your eCommerce platform. This ensures streamlined operations and enhanced functionality.</p>
+            </div>
+
+
+            <div class="card">
+              <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+              </div>
+              <h2>Advertisement</h2>
+              <p>Drive growth and ROI. Full-spectrum digital marketing from platform ads (Amazon, Flipkart) to Meta, Google Ads, and content creator collaborations.</p>
+            </div>
+
+
+            <div class="card">
+              <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+              </div>
+              <h2>eCommerce Migration</h2>
+              <p>Transition your existing online store to a new platform with zero downtime and data loss. We manage the migration process efficiently, ensuring all your data, design, and functionalities are preserved or enhanced.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="site-section sec-5" data-tone="cream">
+      <div class="site-section__inner">
+        <div class="container">
+          <div class="section-header">
+            <h2>Our Work</h2>
+            <div class="underline"></div>
+          </div>
+
+          <div class="carousel-container">
+            <div class="carousel-track" id="cardTrack"></div>
+          </div>
+
+          <div class="showcase-grid" id="showcaseGrid">
+            <div class="info-panel">
+              <div class="info-group">
+                <div class="info-label">Client</div>
+                <div class="info-title" id="clientName">Miracle digital</div>
+              </div>
+
+              <div class="info-group">
+                <div class="info-label">Industry</div>
+                <div class="info-title" id="industryName">Electronics & communication</div>
+              </div>
+
+              <div class="info-group">
+                <div class="info-label">Work</div>
+                <div class="info-text" id="workDescription">
+                  Custom Integration, Performance Optimization, Data Migration, B2B, API Integration, Inventory Sync, Product Management, Checkout Optimization, Analytics
+                </div>
+              </div>
+            </div>
+
+            <div class="preview-panel">
+              <img id="mainWorkImage" src="work1.webp" alt="Project Showcase" width="1000" height="558" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <section id="team" class="site-section sec-6" data-tone="white">
+      <div class="site-section__inner">
+        <div class="section-heading"><h2 class="about-title">Our Team</h2><div class="title-line"></div></div>
+        <div class="carousel-container">
+            <button class="nav-arrow left" type="button" aria-label="Previous team member"><i class="ri-arrow-left-s-line"></i></button>
+            <div class="carousel-track">
+                <div class="card" data-index="0">
+                    <img src="images/team-1.webp" alt="Team Member 1" width="560" height="760" loading="lazy" decoding="async">
+                </div>
+                <div class="card" data-index="1">
+                    <img src="images/team-2.webp" alt="Team Member 2" width="560" height="760" loading="lazy" decoding="async">
+                </div>
+                <div class="card" data-index="2">
+                    <img src="images/team-3.webp" alt="Team Member 3" width="560" height="760" loading="lazy" decoding="async">
+                </div>
+                <div class="card" data-index="3">
+                    <img src="images/team-4.webp" alt="Team Member 4" width="560" height="760" loading="lazy" decoding="async">
+                </div>
+                <div class="card" data-index="4">
+                    <img src="images/team-5.webp" alt="Team Member 5" width="560" height="760" loading="lazy" decoding="async">
+                </div>
+                <div class="card" data-index="5">
+                    <img src="images/team-6.webp" alt="Team Member 6" width="560" height="760" loading="lazy" decoding="async">
+                </div>
+            </div>
+            <button class="nav-arrow right" type="button" aria-label="Next team member"><i class="ri-arrow-right-s-line"></i></button>
+        </div>
+
+        <div class="member-info">
+            <h3 class="member-name">Navin Burnwal</h3>
+            <p class="member-role">Founder</p>
+        </div>
+
+        <div class="dots">
+            <div class="dot active" data-index="0"></div>
+            <div class="dot" data-index="1"></div>
+            <div class="dot" data-index="2"></div>
+            <div class="dot" data-index="3"></div>
+            <div class="dot" data-index="4"></div>
+            <div class="dot" data-index="5"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions" class="site-section sec-7" data-tone="soft">
+      <div class="site-section__inner">
+        <div class="container">
+          <div class="header">
+            <h2>E-Commerce Solutions We Provide</h2>
+            <div class="underline"></div>
+          </div>
+
+          <div class="services-grid-container">
+
+
+            <div class="card card-1">
+              <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 0 0-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+              </div>
+              <h2>Amazon &amp; Flipkart Management</h2>
+              <p>Complete end-to-end seller onboarding, category approvals, brand registry, account health management, and multi-marketplace sync for Amazon, Flipkart, Meesho, and Ajio.</p>
+            </div>
+
+
+            <div class="card card-2">
+              <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <h2>Product Cataloging &amp; SEO</h2>
+              <p>Optimized product listings with high-converting keyword research, bullet points, titles, product photography guidelines, and Enhanced Brand Content (A+ Content).</p>
+            </div>
+
+
+            <div class="card card-3">
+              <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h2>E-Commerce &amp; Web Development</h2>
+              <p>Custom online store development built on modern web stacks (React, Next.js, Node.js) and Shopify, engineered for high performance, security, and sales conversions.</p>
+            </div>
+
+
+            <div class="card card-4">
+              <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              </div>
+              <h2>Mobile App Development</h2>
+              <p>Scalable, high-speed Android and cross-platform mobile applications for business automation, custom e-commerce stores, inventory systems, and customer management.</p>
+            </div>
+
+
+            <div class="card card-5">
+              <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+              </div>
+              <h2>Performance Marketing &amp; Ads</h2>
+              <p>Data-driven Sponsored Ads campaigns across Amazon, Flipkart, Meta (Facebook/Instagram), and Google Ads designed to lower acquisition costs and maximize ROI.</p>
+            </div>
+
+
+            <div class="card card-6">
+              <div class="icon-wrapper">
+                <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              </div>
+              <h2>Analytics, Maintenance &amp; Support</h2>
+              <p>Continuous performance monitoring, security updates, account health audit reports, inventory tracking, and dedicated technical support to keep your business running smoothly.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experts" class="site-section sec-8" data-tone="cream">
+      <div class="site-section__inner">
+        <div class="section-container">
+
+          <h2 class="section-title">We Are your E-commerce Experts</h2>
+          <div class="divider-line"></div>
+
+
+          <div class="stats-grid">
+
+
+            <div class="stat-card">
+              <div class="stat-number-wrapper">
+                <span class="counter" data-target="40">0</span>+
+              </div>
+              <p class="stat-label">Certified Specialists</p>
+            </div>
+
+
+            <div class="stat-card">
+              <div class="stat-number-wrapper">
+                <span class="counter" data-target="1000">0</span>+
+              </div>
+              <p class="stat-label">Onborded Brands</p>
+            </div>
+
+
+            <div class="stat-card">
+              <div class="stat-number-wrapper">
+                <span class="counter" data-target="550">0</span>+
+              </div>
+              <p class="stat-label">Brand Ads run on multiple platform</p>
+            </div>
+
+
+            <div class="stat-card">
+              <div class="stat-number-wrapper">
+                <span class="counter" data-target="200">0</span>+
+              </div>
+              <p class="stat-label">Website & Software Developed</p>
+            </div>
+
+
+            <div class="stat-card">
+              <div class="stat-number-wrapper">
+                <span class="counter" data-target="5">0</span>+
+              </div>
+              <p class="stat-label">Years of Serving </p>
+            </div>
+
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
+
+    <section id="platforms" class="site-section sec-9" data-tone="white">
+      <div class="site-section__inner">
+        <div class="container">
+          <div class="header">
+            <h2>E-commerce Services On Top Platform</h2>
+            <div class="header-line"></div>
+          </div>
+
+          <div class="grid">
+
+
+            <div class="card">
+              <div class="card-header">
+                <div class="logo-container">
+                  <img src="https://cdn.worldvectorlogo.com/logos/shopify.svg" alt="Shopify Logo" width="48" height="36" loading="lazy" decoding="async">
+                </div>
+                <h2 class="card-title">Shopify</h2>
+              </div>
+              <p class="card-body">
+                Enhance user experience and mobile responsiveness with Shopify solutions. We provide end-to-end services, including store setup, theme customization, product cataloging, and seamless third-party application integration, ensuring a highly efficient and scalable eCommerce platform.
+              </p>
+            </div>
+
+
+            <div class="card">
+              <div class="card-header">
+                <div class="logo-container">
+                  <img src="https://www.vectorlogo.zone/logos/amazon/amazon-ar21.svg" alt="Amazon Logo" width="48" height="36" loading="lazy" decoding="async">
+                </div>
+                <h2 class="card-title">Amazon</h2>
+              </div>
+              <p class="card-body">
+                Maximize sales velocity and visibility on Amazon. We handle full Seller Central account setup, Brand Registry, A+ Content design, keyword-optimized product listings, inventory management, and targeted Amazon PPC ad campaign strategies.
+              </p>
+            </div>
+
+
+            <div class="card">
+              <div class="card-header">
+                <div class="logo-container">
+                  <img src="https://cdn.worldvectorlogo.com/logos/flipkart.svg" alt="Flipkart Logo" width="48" height="36" loading="lazy" decoding="async">
+                </div>
+                <h2 class="card-title">Flipkart</h2>
+              </div>
+              <p class="card-body">
+                Establish a strong marketplace presence on Flipkart. Our services cover seller registration, catalog approval, bulk listing uploads, Flipkart Smart fulfillment support, price optimization, and promotional account management.
+              </p>
+            </div>
+
+
+            <div class="card">
+              <div class="card-header">
+                <div class="logo-container">
+                  <img src="https://images.seeklogo.com/logo-png/50/1/meesho-logo-png_seeklogo-507117.png" alt="Meesho Logo" width="48" height="36" loading="lazy" decoding="async">
+                </div>
+                <h2 class="card-title">Meesho</h2>
+              </div>
+              <p class="card-body">
+                Scale your reseller and direct-to-consumer reach on Meesho. We offer product cataloging, competitive pricing strategies, order fulfillment coordination, and targeted promotion setups to maximize order volume across regional markets.
+              </p>
+            </div>
+
+
+            <div class="card">
+              <div class="card-header">
+                <div class="logo-container">
+                  <img src="https://cdn.worldvectorlogo.com/logos/myntra-1.svg" alt="Myntra Logo" width="48" height="36" loading="lazy" decoding="async">
+                </div>
+                <h2 class="card-title">Myntra</h2>
+              </div>
+              <p class="card-body">
+                Position your fashion and lifestyle brand on Myntra. We assist with brand onboarding, high-fashion catalog curation, inventory synchronization, banner promotions, and strict adherence to marketplace SLA and quality standards.
+              </p>
+            </div>
+
+
+            <div class="card">
+              <div class="card-header">
+                <div class="logo-container">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Blinkit-yellow-app-icon.svg" alt="Blinkit Logo" width="48" height="36" loading="lazy" decoding="async">
+                </div>
+                <h2 class="card-title">Blinkit</h2>
+              </div>
+              <p class="card-body">
+                Expand into quick-commerce distribution via Blinkit. We provide vendor onboarding assistance, dark-store inventory planning, optimized product indexing for micro-locations, and real-time stock monitoring.
+              </p>
+            </div>
+
+
+            <div class="card">
+              <div class="card-header">
+                <div class="logo-container">
+                  <img src="https://images.seeklogo.com/logo-png/33/1/snapdeal-logo-png_seeklogo-335010.png" alt="Snapdeal Logo" width="48" height="36" loading="lazy" decoding="async">
+                </div>
+                <h2 class="card-title">Snapdeal</h2>
+              </div>
+              <p class="card-body">
+                Tap into value-conscious shoppers across Tier-2 and Tier-3 markets on Snapdeal. Services include seller onboarding, catalog mapping, order processing setup, and targeted category discount participation.
+              </p>
+            </div>
+
+
+            <div class="card">
+              <div class="card-header">
+                <div class="logo-container">
+                  <img src="https://images.seeklogo.com/logo-png/46/1/jiomart-logo-png_seeklogo-469685.png" alt="JioMart Logo" width="48" height="36" loading="lazy" decoding="async">
+                </div>
+                <h2 class="card-title">JioMart</h2>
+              </div>
+              <p class="card-body">
+                Leverage Reliance's extensive retail network with JioMart integration. We manage merchant seller onboarding, local store inventory syncing, category listing management, and promotional campaigns.
+              </p>
+            </div>
+
+
+            <div class="card">
+              <div class="card-header">
+                <div class="logo-container">
+                  <img src="https://images.seeklogo.com/logo-png/48/1/zepto-logo-png_seeklogo-480639.png" alt="Zepto Logo" width="48" height="36" loading="lazy" decoding="async">
+                </div>
+                <h2 class="card-title">Zepto</h2>
+              </div>
+              <p class="card-body">
+                Streamline multi-channel distribution across premium quick commerce on Zepto. We oversee catalog compliance, dark store fulfillment workflows, inventory management, and brand store creation.
+              </p>
+            </div>
+
+
+            <div class="card">
+              <div class="card-header">
+                <div class="logo-container">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" alt="Meta Logo" width="48" height="36" loading="lazy" decoding="async">
+                </div>
+                <h2 class="card-title">Meta Ads</h2>
+              </div>
+              <p class="card-body">
+                Scale your online presence with targeted digital marketing on Facebook and Instagram. We offer complete campaign strategies, Meta Pixel tracking, custom retargeting funnels, and high-converting ad creative management.
+              </p>
+            </div>
+
+
+            <div class="card">
+              <div class="card-header">
+                <div class="logo-container">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo" width="48" height="36" loading="lazy" decoding="async">
+                </div>
+                <h2 class="card-title">Google Ads</h2>
+              </div>
+              <p class="card-body">
+                Capture high-intent commercial traffic via Google Search, Shopping, and YouTube Ads. We deliver keyword bidding optimization, Performance Max campaigns, and full Google Analytics 4 (GA4) conversion tracking.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lifecycle" class="site-section sec-11" data-tone="cream">
+      <div class="site-section__inner">
+        <div class="process-container">
+          <div class="header-text">
+            <h2>Our 360° Growth Lifecycle</h2>
+            <div class="title-underline"></div>
+            <p>Click any phase to explore detailed execution across E-Commerce, Dev & Marketing</p>
+          </div>
+
+          <div class="timeline-wrapper">
+            <div class="timeline-line"></div>
+            <div class="timeline-progress" id="progressLine"></div>
+
+
+            <div class="step-item pos-right">
+              <div class="step-node"></div>
+              <div class="step-card" tabindex="0" role="button" aria-expanded="false">
+                <span class="step-tag">Phase 01</span>
+                <div class="card-header">
+                  <h3 class="step-title">Discovery & Strategy</h3>
+                  <div class="toggle-icon">+</div>
+                </div>
+
+                <div class="card-details">
+                  <div class="detail-group">
+                    <span class="detail-label">🛒 E-Commerce Services</span>
+                    <p class="detail-text">GST/Trademark audit, brand registry preparation, and Amazon/Flipkart seller account health check.</p>
+                  </div>
+                  <div class="detail-group">
+                    <span class="detail-label">💻 Web & App Development</span>
+                    <p class="detail-text">User journey mapping, architecture wireframing, and tech stack selection (React/Next.js).</p>
+                  </div>
+                  <div class="detail-group">
+                    <span class="detail-label">📈 Digital Marketing</span>
+                    <p class="detail-text">Competitor analysis, keyword mining, Meta Pixel setup, and campaign structure design.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="step-item pos-left">
+              <div class="step-node"></div>
+              <div class="step-card" tabindex="0" role="button" aria-expanded="false">
+                <span class="step-tag">Phase 02</span>
+                <div class="card-header">
+                  <h3 class="step-title">Design, Build & Cataloging</h3>
+                  <div class="toggle-icon">+</div>
+                </div>
+
+                <div class="card-details">
+                  <div class="detail-group">
+                    <span class="detail-label">🛒 E-Commerce Services</span>
+                    <p class="detail-text">High-converting SEO listings, photography shoots, and A+ Enhanced Content creation.</p>
+                  </div>
+                  <div class="detail-group">
+                    <span class="detail-label">💻 Web & App Development</span>
+                    <p class="detail-text">Building custom mobile storefronts, API route integration, and payment gateway setup.</p>
+                  </div>
+                  <div class="detail-group">
+                    <span class="detail-label">📈 Digital Marketing</span>
+                    <p class="detail-text">Ad creative designing (short reels & graphics) and automated WhatsApp lead funnels.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="step-item pos-right">
+              <div class="step-node"></div>
+              <div class="step-card" tabindex="0" role="button" aria-expanded="false">
+                <span class="step-tag">Phase 03</span>
+                <div class="card-header">
+                  <h3 class="step-title">Launch & Deployment</h3>
+                  <div class="toggle-icon">+</div>
+                </div>
+
+                <div class="card-details">
+                  <div class="detail-group">
+                    <span class="detail-label">🛒 E-Commerce Services</span>
+                    <p class="detail-text">Bulk listing upload across Amazon/Flipkart/Meesho, price markup rules, and logistics mapping.</p>
+                  </div>
+                  <div class="detail-group">
+                    <span class="detail-label">💻 Web & App Development</span>
+                    <p class="detail-text">Cloud server deployment, security audit testing, and Google Play Store submission.</p>
+                  </div>
+                  <div class="detail-group">
+                    <span class="detail-label">📈 Digital Marketing</span>
+                    <p class="detail-text">Google Search campaigns launch and targeted Meta Lead Generation ad activation.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="step-item pos-left">
+              <div class="step-node"></div>
+              <div class="step-card" tabindex="0" role="button" aria-expanded="false">
+                <span class="step-tag">Phase 04</span>
+                <div class="card-header">
+                  <h3 class="step-title">Scale & Optimization</h3>
+                  <div class="toggle-icon">+</div>
+                </div>
+
+                <div class="card-details">
+                  <div class="detail-group">
+                    <span class="detail-label">🛒 E-Commerce Services</span>
+                    <p class="detail-text">Ongoing account health tracking, return rate reduction, and festival sale event participation.</p>
+                  </div>
+                  <div class="detail-group">
+                    <span class="detail-label">💻 Web & App Development</span>
+                    <p class="detail-text">Continuous database optimization, speed patches, and regular software updates.</p>
+                  </div>
+                  <div class="detail-group">
+                    <span class="detail-label">📈 Digital Marketing</span>
+                    <p class="detail-text">Amazon PPC optimization, retargeting ads, lower acquisition costs, and monthly growth reports.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <section id="reviews" class="site-section sec-12" data-tone="soft">
+      <div class="site-section__inner">
+        <div class="reviews-section">
+            <div class="container">
+              <h2 class="section-title">What Our Clients Say</h2>
+
+              <div class="carousel-wrapper">
+                <button class="arrow-btn" id="prevBtn" type="button" aria-label="Previous reviews"><i class="fa-solid fa-chevron-left"></i></button>
+
+                <div class="reviews-slider" id="reviewsSlider">
+
+                  <div class="review-card">
+                    <div>
+                      <div class="rating-header">
+                        <span class="rating-score">5.0</span>
+                        <div class="stars">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                      </div>
+                      <p class="review-quote">"Communication, quality of work, and delivery were all spot on."</p>
+                    </div>
+                    <div>
+                      <p class="reviewer-info">Founder, Nanogen</p>
+                      <div class="verified-badge">
+                        <i class="fa-regular fa-check-circle"></i> Verified Review
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="review-card">
+                    <div>
+                      <div class="rating-header">
+                        <span class="rating-score">5.0</span>
+                        <div class="stars">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                      </div>
+                      <p class="review-quote">"Best web devlopment service's"</p>
+                    </div>
+                    <div>
+                      <p class="reviewer-info">CFO, Clasivity</p>
+                      <div class="verified-badge">
+                        <i class="fa-regular fa-check-circle"></i> Verified Review
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="review-card">
+                    <div>
+                      <div class="rating-header">
+                        <span class="rating-score">5.0</span>
+                        <div class="stars">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                      </div>
+                      <p class="review-quote">"The team helpss and manges well."</p>
+                    </div>
+                    <div>
+                      <p class="reviewer-info">Manager, Soniqx</p>
+                      <div class="verified-badge">
+                        <i class="fa-regular fa-check-circle"></i> Verified Review
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="review-card">
+                    <div>
+                      <div class="rating-header">
+                        <span class="rating-score">5.0</span>
+                        <div class="stars">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                      </div>
+                      <p class="review-quote">"The team is best!!."</p>
+                    </div>
+                    <div>
+                      <p class="reviewer-info">Manager, Parul</p>
+                      <div class="verified-badge">
+                        <i class="fa-regular fa-check-circle"></i> Verified Review
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="review-card">
+                    <div>
+                      <div class="rating-header">
+                        <span class="rating-score">4.5</span>
+                        <div class="stars">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                      </div>
+                      <p class="review-quote">"They were very accommodating."</p>
+                    </div>
+                    <div>
+                      <p class="reviewer-info">VP Of Ecommerce, Allester</p>
+                      <div class="verified-badge">
+                        <i class="fa-regular fa-check-circle"></i> Verified Review
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="review-card">
+                    <div>
+                      <div class="rating-header">
+                        <span class="rating-score">5.0</span>
+                        <div class="stars">
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                        </div>
+                      </div>
+                      <p class="review-quote">"Exceptional execution and great ongoing support!"</p>
+                    </div>
+                    <div>
+                      <p class="reviewer-info">E-com Executive, Delci</p>
+                      <div class="verified-badge">
+                        <i class="fa-regular fa-check-circle"></i> Verified Review
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="arrow-btn" id="nextBtn" type="button" aria-label="Next reviews"><i class="fa-solid fa-chevron-right"></i></button>
+              </div>
+
+              <div class="dots-pagination">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="contact" class="site-section sec-12 sec-12--cta" data-tone="accent">
+      <div class="site-section__inner">
+        <div class="contact-section">
+            <h2>Have a Question? Contact Us</h2>
+            <a class="btn-contact" href="#hero-form">Contact Us</a>
+          </div>
+      </div>
+    </section>
+
+    <section id="faq" class="site-section sec-12" data-tone="cream">
+      <div class="site-section__inner">
+        <div class="faq-section">
+            <div class="container">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-underline"></div>
+
+              <div class="faq-grid">
+                <div class="faq-item">
+                  <button type="button" class="faq-q" id="faq-q-1" aria-expanded="false" aria-controls="faq-a-1">
+                    <span>What services do you offer?</span>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1">
+                    <div class="faq-a__inner"><p>We provide custom web software development, digital marketing (PPC &amp; SEO), and end-to-end e-commerce marketplace management across major Indian platforms.</p></div>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <button type="button" class="faq-q" id="faq-q-2" aria-expanded="false" aria-controls="faq-a-2">
+                    <span>What software development solutions do you build?</span>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2">
+                    <div class="faq-a__inner"><p>We develop high-converting e-commerce websites, custom web apps, and ERP integrations like Unicommerce, Shiprocket, and Tally.</p></div>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <button type="button" class="faq-q" id="faq-q-3" aria-expanded="false" aria-controls="faq-a-3">
+                    <span>How does your digital marketing service work?</span>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3">
+                    <div class="faq-a__inner"><p>We run targeted PPC ad campaigns, optimize multi-channel SEO, and execute growth strategies for major sales events.</p></div>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <button type="button" class="faq-q" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4">
+                    <span>What is included in marketplace onboarding?</span>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4">
+                    <div class="faq-a__inner"><p>We handle GST verification, account setup, brand registry, SEO cataloging, and shipping template configurations.</p></div>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <button type="button" class="faq-q" id="faq-q-5" aria-expanded="false" aria-controls="faq-a-5">
+                    <span>How do you protect seller accounts?</span>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-q-5">
+                    <div class="faq-a__inner"><p>We monitor account health 24/7, resolve policy violations, and reactivate suppressed product listings.</p></div>
+                  </div>
+                </div>
+                <div class="faq-item">
+                  <button type="button" class="faq-q" id="faq-q-6" aria-expanded="false" aria-controls="faq-a-6">
+                    <span>What engagement models do you offer?</span>
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                  </button>
+                  <div class="faq-a" id="faq-a-6" role="region" aria-labelledby="faq-q-6">
+                    <div class="faq-a__inner"><p>Choose between a One-Time Launch Package for initial setup or a Monthly Retainer for full daily management.</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="book" class="site-section sec-12" data-tone="white">
+      <div class="site-section__inner">
+        <div class="form-section">
+            <div class="container">
+              <div class="form-wrapper">
+                <div class="book-banner">
+                  <div class="banner-icon">
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </div>
+                  <h3>Book a 20-Minute Call with a Solution Expert</h3>
+                </div>
+
+                <div class="calendly-row" data-calendly-row hidden>
+                  <button type="button" class="btn-calendly" data-calendly>
+                    <i class="fa-regular fa-calendar-check" aria-hidden="true"></i> Pick a time on Calendly
+                  </button>
+                  <span class="calendly-or">or send us a message below</span>
+                </div>
+
+                <form class="form-container js-demo-form" data-source="book" action="#" method="POST" novalidate>
+                  <div class="hp-field" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="quote-fullname">Full Name</label>
+                      <input type="text" id="quote-fullname" name="fullname" required autocomplete="name">
+                    </div>
+                    <div class="form-group">
+                      <label for="quote-email">Your Email</label>
+                      <input type="email" id="quote-email" name="email" required autocomplete="email">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="quote-company">Company Name</label>
+                    <input type="text" id="quote-company" name="company">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="quote-message">Message</label>
+                    <textarea id="quote-message" name="message"></textarea>
+                  </div>
+
+                  <button type="submit" class="btn-submit">
+                    Request Free Quote <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer" class="site-section sec-13" data-tone="footer">
+    <div class="site-section__inner">
+      <footer class="site-footer">
+        <div class="footer-container">
+
+          <div class="footer-main">
+
+            <!-- Brand + address + social -->
+            <div class="footer-brand">
+              <h3 class="company-title">ATES NB <span>ECOMMERCE SOLUTIONS</span></h3>
+
+              <address class="address-text">
+                <i class="ri-map-pin-2-fill" aria-hidden="true"></i>
+                <span>
+                  Near Sankat Mochan Mandir, Hetlibandh, Jharia,<br>
+                  Dhanbad, Jharkhand - 828111, India
+                </span>
+              </address>
+
+              <div class="social-links">
+                <a href="https://www.facebook.com/navin.burnwal.73/" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/navin-burnwal-95485b160" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/navin__barnwal" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="footer-col">
+              <h4 class="footer-label">Phone</h4>
+              <ul class="contact-list">
+                <li><a class="contact-link" href="tel:+918406031253"><i class="ri-phone-fill" aria-hidden="true"></i><span>+91 8406031253</span></a></li>
+                <li><a class="contact-link" href="tel:+919709096518"><i class="ri-phone-fill" aria-hidden="true"></i><span>+91 9709096518</span></a></li>
+              </ul>
+            </div>
+
+            <!-- Email -->
+            <div class="footer-col">
+              <h4 class="footer-label">Connect</h4>
+              <ul class="contact-list">
+                <li><a class="contact-link" href="mailto:ecommercesellerconsultant@gmail.com"><i class="ri-mail-fill" aria-hidden="true"></i><span>ecommercesellerconsultant@gmail.com</span></a></li>
+              </ul>
+              <h4 class="footer-label footer-label--spaced">Sales</h4>
+              <ul class="contact-list">
+                <li><a class="contact-link" href="mailto:atesnb1@gmail.com"><i class="ri-mail-fill" aria-hidden="true"></i><span>atesnb1@gmail.com</span></a></li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="footer-bottom">
+            <p>&copy; ATES NB ECOMMERCE SOLUTIONS 2026. All Rights Reserved. Developed by Alloy'sn.</p>
+          </div>
+
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Floating contact buttons (buttons only - no auto-popup) -->
+  <div class="float-contact" aria-label="Contact options">
+    <a class="float-btn float-btn--whatsapp" href="https://wa.me/918406031253" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    </a>
+    <a class="float-btn float-btn--chat" href="#book" aria-label="Send us a message" title="Send us a message">
+      <i class="fa-solid fa-comment" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <script src="/js/config.js" defer></script>
+  <script src="/js/script.js" defer></script>
+</body>
+</html>
